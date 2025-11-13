@@ -3,7 +3,7 @@
 - David Pacheco 
 - Marcelo Insaurralde
 - Gonzalo Curtosi
-- Ariel 
+- Ariel Espósito
 ## Carrera 
  Tecnicatura universitaria de Telecomunicaciones  
 ## Materia 

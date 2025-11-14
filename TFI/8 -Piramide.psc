@@ -1,6 +1,6 @@
-// El usuario debe ingresar un número  y genera una pirámide de 
-//números hasta llegar al número. Cada número es una fila
-//Maximice Ventana para mejorar visualización
+// El usuario debe ingresar un nÃºmero  y genera una pirÃ¡mide de 
+//nÃºmeros hasta llegar al nÃºmero. Cada nÃºmero es una fila
+//Maximice Ventana para mejorar visualizaciÃ³n
 
 Algoritmo Piramide
 	//definicion de variables
@@ -9,26 +9,27 @@ Algoritmo Piramide
 	//inicializo variables
 	numero_ingresado = 1
 	
-	Escribir "Bienvenido, vamos a contruir una pirámide de números"
+	Escribir "Bienvenido, vamos a contruir una pirÃ¡mide de nÃºmeros"
 	Mientras (numero_ingresado > 0 Y numero_ingresado < 100) Hacer
-		Escribir "Favor de ingresar un número Entero entre 1 y 99, Ej: 1, este también será la altura de la pirámide"
+		Escribir "Favor de ingresar un nÃºmero Entero entre 1 y 99, Ej: 1, este tambiÃ©n serÃ¡ la altura de la pirÃ¡mide"
 		Escribir "Cualquier otro para finalizar"
 		Leer numero_ingresado
 		
-		digitos = Longitud(ConvertirATexto(numero_ingresado)) // verifico cuántos dígitos tiene el número más grande, base de la pirámide
-		centrar <- trunc((1 + (numero_ingresado - 1 ) * 2)/2) // calculo dónde debe empezar a imprimir los números (Lo más al centro posible de la pirámide)
-		
-		Para i <- 1 hasta numero_ingresado Con Paso 1 Hacer
-			digitos = Longitud(ConvertirATexto(i)) // calculo cuántos dígitos tiene el número a representar
-			Para j <- 1 hasta (centrar) Con Paso 1 Hacer 
-				Escribir Sin Saltar " " // Escribo espacios hasta llegar al área de pantalla donde debe comenzar a aparecer el número
-			FinPara
-			para j <- 1 hasta redon(((1 + (i - 1) * 2))/digitos) Con Paso 1 Hacer // la cantidad de números a imprimir (Considerando la cantidad de dígitos que tiene el número)
-				Escribir i Sin Saltar // Escribo el número ingresado tantas veces como sea necesario
-			FinPara
-			Escribir ""  // hago un salto de línea
-			centrar <- centrar - 1 // resto a la posición donde debe comenzar a escribir en la próxima iteración.
-		Fin Para
-	Fin Mientras
-	
+		Si numero_ingresado > 0 Y numero_ingresado < 100
+			digitos = Longitud(ConvertirATexto(numero_ingresado)) // verifico cuÃ¡ntos dÃ­gitos tiene el nÃºmero mÃ¡s grande, base de la pirÃ¡mide
+			centrar <- trunc((1 + (numero_ingresado - 1 ) * 2)/2) // calculo dÃ³nde debe empezar a imprimir los nÃºmeros (Lo mÃ¡s al centro posible de la pirÃ¡mide)
+			
+			Para i <- 1 hasta numero_ingresado Con Paso 1 Hacer
+				digitos = Longitud(ConvertirATexto(i)) // calculo cuÃ¡ntos dÃ­gitos tiene el nÃºmero a representar
+				Para j <- 1 hasta (centrar) Con Paso 1 Hacer 
+					Escribir Sin Saltar " " // Escribo espacios hasta llegar al Ã¡rea de pantalla donde debe comenzar a aparecer el nÃºmero
+				FinPara
+				Para j <- 1 hasta redon(((1 + (i - 1) * 2))/digitos) Con Paso 1 Hacer // la cantidad de nÃºmeros a imprimir (Considerando la cantidad de dÃ­gitos que tiene el nÃºmero)
+					Escribir i Sin Saltar // Escribo el nÃºmero ingresado tantas veces como sea necesario
+				FinPara
+				Escribir ""  // hago un salto de lÃ­nea
+				centrar <- centrar - 1 // resto a la posiciÃ³n donde debe comenzar a escribir en la prÃ³xima iteraciÃ³n.
+			Fin Para
+		FinSi
+	Fin Mientras	
 FinAlgoritmo
